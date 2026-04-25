@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const { startScanner } = require("./core/scanner");
 const { startIndexer } = require("./indexer/scanner");
+const path = require("path"); 
 
 // Import Routes
 const explorerRoutes = require("./routes/explorer");
@@ -18,6 +19,8 @@ const verificationRoutes = require("./routes/verification");
 
 // Forensics
 const authRoutes = require("./routes/auth");
+const caseRoutes = require("./routes/caseRoutes");
+const evidenceRoutes = require("./routes/evidenceRoutes");
 
 
 const app = express();
@@ -25,6 +28,12 @@ const app = express();
 // Middlewares
 app.use(cors());
 app.use(express.json());
+
+const CASES_PATH = path.join(__dirname, "cases");
+console.log("📂 Serving static files from:", CASES_PATH);
+
+app.use("/files", express.static(CASES_PATH));
+
 
 // Register All Modules
 app.use("/", explorerRoutes);
@@ -40,6 +49,8 @@ app.use("/", verificationRoutes);
 
 //Forensics 
 app.use("/", authRoutes);
+app.use("/", caseRoutes);
+app.use("/", evidenceRoutes);
 
 // 🔥 Start Background Engines
 let SYSTEM_STARTED = false;

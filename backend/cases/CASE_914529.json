@@ -38,9 +38,35 @@
       "timestamp": "2026-04-25T07:08:34Z",
       "tx_hash": "D5A446810BEDB002B71109452ACB6A509692E8649074874B2E20F051C9FCEF43",
       "block_height": "3448"
+    },
+    {
+      "type": "EVIDENCE_COLLECTED",
+      "evidence_id": "EVID_662713",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-25T08:11:02.713Z",
+      "tx_hash": "EE16C36AA084E7F5A276EEF0284F464D33B839D1923E5C2A0B14FB1D76C2ED96"
     }
   ],
-  "evidence": [],
+  "evidence": [
+    {
+      "evidence_id": "EVID_492705",
+      "hash": "1e6ea736120636f762dd8e0c2e8ef680e8ade3a4caa643a2e9366bdd3f34ec63",
+      "category": "IMAGE",
+      "type": "image/jpeg",
+      "collected_by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-25T08:08:12.705Z",
+      "tx_hash": "E59E4167EC1A183526C8BC729327A3D066A39DF11ACFEDEB5D773E9B163E4E2B"
+    },
+    {
+      "evidence_id": "EVID_662713",
+      "hash": "a2598048771fe6d8664a9287050d6782ab5e985ad0f60c7c84ee01c0aac1b9a7",
+      "category": "IMAGE",
+      "type": "image/jpeg",
+      "collected_by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-25T08:11:02.713Z",
+      "tx_hash": "EE16C36AA084E7F5A276EEF0284F464D33B839D1923E5C2A0B14FB1D76C2ED96"
+    }
+  ],
   "reports": [],
   "audit": [
     {
@@ -49,6 +75,13 @@
       "assigned_to": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
       "timestamp": "2026-04-25T07:08:34Z",
       "tx_hash": "D5A446810BEDB002B71109452ACB6A509692E8649074874B2E20F051C9FCEF43"
+    },
+    {
+      "action": "EVIDENCE_ADDED",
+      "evidence_id": "EVID_662713",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-25T08:11:02.713Z",
+      "tx_hash": "EE16C36AA084E7F5A276EEF0284F464D33B839D1923E5C2A0B14FB1D76C2ED96"
     }
   ]
 }

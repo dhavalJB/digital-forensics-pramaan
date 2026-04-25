@@ -1,0 +1,34 @@
+{
+  "evidence_id": "EVID_662713",
+  "case_id": "CASE_914529",
+  "type": "image/jpeg",
+  "category": "IMAGE",
+  "file_name": "EVID_662713.jpg",
+  "size": 62853,
+  "hash": "a2598048771fe6d8664a9287050d6782ab5e985ad0f60c7c84ee01c0aac1b9a7",
+  "integrity": {
+    "hash_algorithm": "SHA256",
+    "hash_verified": true
+  },
+  "collected_by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+  "collected_at": "2026-04-25T08:11:02.713Z",
+  "location": {
+    "lat": 21.5222,
+    "lng": 71.22
+  },
+  "ownership": {
+    "current_owner": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+    "history": [
+      {
+        "owner": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+        "action": "COLLECTED",
+        "timestamp": "2026-04-25T08:11:02.713Z"
+      }
+    ]
+  },
+  "chain_proof": {
+    "tx_hash": "EE16C36AA084E7F5A276EEF0284F464D33B839D1923E5C2A0B14FB1D76C2ED96",
+    "block_height": "4171",
+    "timestamp": "2026-04-25T08:10:58Z"
+  }
+}
