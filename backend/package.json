@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "pm2 start ecosystem.config.js --env development && pm2 logs pramaan-backend",
+    "stop": "pm2 delete pramaan-backend",
+    "restart": "pm2 restart pramaan-backend",
+    "logs": "pm2 logs pramaan-backend"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "js-yaml": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

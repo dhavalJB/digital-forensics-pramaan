@@ -1,0 +1,12 @@
+services:
+  root:
+    build: .
+    container_name: pramaan-root
+    user: "${UID}:${GID}"   # 👈 ADD THIS
+    ports:
+      - "26657:26657"
+      - "26656:26656"
+      - "9090:9090"
+    volumes:
+      - ./.pramaand:/app/.pramaand
+    restart: unless-stopped
