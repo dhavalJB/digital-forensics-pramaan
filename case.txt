@@ -1,0 +1,53 @@
+CASE STORY (USE THIS EXACT FLOW)
+📍 Incident
+Location: Railway Station Platform
+Incident: Mobile phone stolen
+Time: ~8:30 PM
+👮 Step 1 — IO arrives (FORENSIC_OFFICER)
+
+Collects:
+
+✔ Photo of location
+✔ Victim statement (audio)
+🎥 Step 2 — CCTV collected
+
+From station authority:
+
+✔ CCTV footage (video)
+✔ Time window evidence
+📄 Step 3 — Documents created
+✔ FIR (PDF)
+✔ Seizure memo (PDF)
+🧪 Step 4 — Analysis (ANALYST)
+✔ Extract suspect frame from CCTV
+✔ Generate report
+📦 Step 5 — Custody transfer
+IO → Custodian → Analyst → Court
+⚖️ Step 6 — Verification (VERIFIER)
+✔ Check hash
+✔ Check chain proof
+✔ Validate custody
+🔥 WHY THIS CASE IS PERFECT
+
+Because it forces your system to handle:
+
+✔ Multiple evidence types
+✔ Real custody transitions
+✔ Report generation
+✔ Verification flow
+✔ Court admissibility logic
+❌ WHY NOT OTHER CASES
+
+Avoid:
+
+❌ Cyber fraud (too abstract for demo)
+❌ Murder (too complex legally)
+❌ Drug case (requires physical evidence handling)
+🧠 FINAL DECISION
+
+Lock this:
+
+CASE NAME: Railway Mobile Theft Case
+
+Everything you build next will revolve around this.
+

@@ -23,3 +23,21 @@ exports.login = async (req, res) => {
     res.json({ success: false, error: "Login failed" });
   }
 };
+
+exports.getProfile = async (req, res) => {
+  try {
+    const { address } = req.params;
+
+    const profile = await authService.getIssuerProfile(address);
+
+    res.json({
+      success: true,
+      profile,
+    });
+  } catch (err) {
+    res.json({
+      success: false,
+      error: "Failed to fetch profile",
+    });
+  }
+};

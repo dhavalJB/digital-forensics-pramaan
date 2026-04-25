@@ -1,0 +1,54 @@
+{
+  "case_id": "CASE_914529",
+  "meta": {
+    "title": "Mobile Theft at Railway Station",
+    "description": "A mobile phone was reported stolen from Platform 2 at Amreli Railway Station during evening hours. CCTV footage and on-site evidence collected.",
+    "case_type": "DIGITAL_THEFT",
+    "priority": "HIGH",
+    "location": {
+      "place": "Amreli Railway Station",
+      "platform": "Platform 2",
+      "city": "Amreli",
+      "state": "Gujarat",
+      "country": "India"
+    },
+    "incident_time": "2026-04-25T07:08:34.529Z",
+    "created_by": "pramaan1snrsgmy290rta9784mu0m62vtu5rmflu940cus",
+    "assigned_io": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+    "created_at": "2026-04-25T07:08:34Z",
+    "status": "ACTIVE"
+  },
+  "officers": {
+    "investigating_officer": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+    "created_by": "pramaan1snrsgmy290rta9784mu0m62vtu5rmflu940cus"
+  },
+  "chain_proof": {
+    "case_creation": {
+      "tx_hash": "D5A446810BEDB002B71109452ACB6A509692E8649074874B2E20F051C9FCEF43",
+      "block_height": "3448",
+      "timestamp": "2026-04-25T07:08:34Z",
+      "data_hash": "ae8db016b3192846a151be57f53dba0ee775395b39d7ff82c6556f1c488cd732"
+    }
+  },
+  "timeline": [
+    {
+      "type": "CASE_CREATED",
+      "by": "pramaan1snrsgmy290rta9784mu0m62vtu5rmflu940cus",
+      "assigned_to": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-25T07:08:34Z",
+      "tx_hash": "D5A446810BEDB002B71109452ACB6A509692E8649074874B2E20F051C9FCEF43",
+      "block_height": "3448"
+    }
+  ],
+  "evidence": [],
+  "reports": [],
+  "audit": [
+    {
+      "action": "CASE_CREATED",
+      "by": "pramaan1snrsgmy290rta9784mu0m62vtu5rmflu940cus",
+      "assigned_to": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-25T07:08:34Z",
+      "tx_hash": "D5A446810BEDB002B71109452ACB6A509692E8649074874B2E20F051C9FCEF43"
+    }
+  ]
+}

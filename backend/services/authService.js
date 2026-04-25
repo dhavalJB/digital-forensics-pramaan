@@ -6,7 +6,6 @@ const { fundAddress } = require("../core/provisioner");
 const HOME = "/home/dhaval/digital-forensics/.pramaand";
 const KEYRING = "file";
 
-// 🔥 CREATE WALLET (SIGNUP)
 exports.signup = async () => {
   const name = "user_" + crypto.randomBytes(4).toString("hex");
   const passphrase = "123456789";
@@ -71,7 +70,6 @@ exports.signup = async () => {
   });
 };
 
-// 🔥 LOGIN
 exports.login = async ({ name, passphrase }) => {
   return new Promise((resolve) => {
     const child = spawn("pramaand", [
@@ -112,7 +110,6 @@ exports.login = async ({ name, passphrase }) => {
   });
 };
 
-// 🔥 ROLE DETECTION
 async function detectRoles(address) {
   const roles = ["USER"];
 
@@ -128,3 +125,49 @@ async function detectRoles(address) {
 
   return roles;
 }
+
+exports.getIssuerProfile = async (address) => {
+  try {
+    const res = await execPromise(
+      `pramaand query txs --query "message.action='/pramaan.issuer.v1.MsgCreateIssuer'" --limit 50 --home /home/dhaval/digital-forensics/.pramaand --output json`
+    );
+
+    const data = JSON.parse(res);
+
+    if (!data.txs) return { exists: false };
+
+    for (const tx of data.txs.reverse()) {
+      const events = tx.events || [];
+
+      const match = events.find((e) => {
+        if (e.type !== "issuer_added") return false;
+
+        return e.attributes?.some(
+          (a) => a.key === "address" && a.value === address
+        );
+      });
+
+      if (match) {
+        const memo = tx?.tx?.body?.memo;
+
+        if (!memo) continue;
+
+        let metadata = {};
+        try {
+          metadata = JSON.parse(memo);
+        } catch {}
+
+        return {
+          exists: true,
+          address,
+          ...metadata,
+        };
+      }
+    }
+
+    return { exists: false };
+  } catch (err) {
+    console.error(err);
+    return { exists: false };
+  }
+};
