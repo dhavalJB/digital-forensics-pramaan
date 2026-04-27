@@ -41,10 +41,131 @@
     },
     {
       "type": "EVIDENCE_COLLECTED",
+      "evidence_id": "EVID_492705",
+      "hash": "1e6ea736120636f762dd8e0c2e8ef680e8ade3a4caa643a2e9366bdd3f34ec63",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-25T08:08:12.705Z",
+      "tx_hash": "E59E4167EC1A183526C8BC729327A3D066A39DF11ACFEDEB5D773E9B163E4E2B"
+    },
+    {
+      "type": "EVIDENCE_COLLECTED",
       "evidence_id": "EVID_662713",
       "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
       "timestamp": "2026-04-25T08:11:02.713Z",
       "tx_hash": "EE16C36AA084E7F5A276EEF0284F464D33B839D1923E5C2A0B14FB1D76C2ED96"
+    },
+    {
+      "type": "EVIDENCE_TRANSFERRED",
+      "evidence_id": "EVID_662713",
+      "from": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "to": "pramaan1xxxxxxxxxxxxxxx",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-25T12:49:52.829Z",
+      "tx_hash": "B5A12C9578FA18830E3524C201C72207808687962F09FD63BF094EAC7CEEEF2E"
+    },
+    {
+      "type": "EVIDENCE_TRANSFER_INITIATED",
+      "evidence_id": "EVID_492705",
+      "from": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-27T06:26:54.399Z",
+      "tx_hash": "A8020612C32C17E69476E98523F23E6A306BB2170B686314F587F6A15A5D87A6"
+    },
+    {
+      "type": "EVIDENCE_ACCEPTED",
+      "evidence_id": "EVID_492705",
+      "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-27T06:59:55.902Z",
+      "tx_hash": "B8E6B0629CE6AA0E0A0106897670C52D9E9C5E9C5AF571F064778695C48138F3"
+    },
+    {
+      "type": "EVIDENCE_COLLECTED",
+      "evidence_id": "EVID_933591",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-27T07:12:13.591Z",
+      "tx_hash": "A08F85E38810B078FC46D3C79F79A62F556F2AAFC24831640D929A1DB55DC134"
+    },
+    {
+      "type": "EVIDENCE_TRANSFER_INITIATED",
+      "evidence_id": "EVID_933591",
+      "from": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "report": null,
+      "timestamp": "2026-04-27T08:11:05.646Z",
+      "tx_hash": "C32F16C0A68D2EF92D67D68E3863EE594CDF14EA6C8C538807EB7B9E73C3B177"
+    },
+    {
+      "type": "EVIDENCE_ACCEPTED",
+      "evidence_id": "EVID_933591",
+      "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-27T08:11:36.673Z",
+      "tx_hash": "69AB87C0C823BE109028A32206D53966D3FD1D2D07644A45B6B0A1C85F65000C"
+    },
+    {
+      "type": "EVIDENCE_TRANSFER_INITIATED",
+      "evidence_id": "EVID_933591",
+      "from": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "to": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "report": {
+        "summary": "Sent for forensic analysis",
+        "notes": "Initial custody maintained, forwarding for analysis"
+      },
+      "timestamp": "2026-04-27T08:17:58.488Z",
+      "tx_hash": "3FA50D9F48F482C5832B54DF84FBEB5FAB400F22FFA4E2374DF41846F54905EC"
+    },
+    {
+      "type": "EVIDENCE_ACCEPTED",
+      "evidence_id": "EVID_933591",
+      "by": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "timestamp": "2026-04-27T08:18:20.888Z",
+      "tx_hash": "443961305E26BDEBB763051AFE67C92262126A1FEFCE4DE14252710051D4E61F"
+    },
+    {
+      "type": "EVIDENCE_ACCEPTED",
+      "evidence_id": "EVID_933591",
+      "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-27T13:03:30.767Z",
+      "tx_hash": "A687DAFE8F84B9226DFA06F0DE19D4647D193FB0D11CF9CC86D1FAF8F8EA16CD"
+    },
+    {
+      "type": "EVIDENCE_TRANSFER_INITIATED",
+      "evidence_id": "EVID_933591",
+      "from": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "to": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-27T13:12:03.018Z",
+      "tx_hash": "8A3A77F5B8245C03566B9CE16B8C6BBFE556E1B7175153B236EA9838569F1FD5"
+    },
+    {
+      "type": "EVIDENCE_ACCEPTED",
+      "evidence_id": "EVID_933591",
+      "by": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "timestamp": "2026-04-27T13:12:15.068Z",
+      "tx_hash": "6D0B118F96B7F971171818DEEA2ED19EFED88B67130601E217196D59378A811E"
+    },
+    {
+      "type": "EVIDENCE_REPORT_SUBMITTED",
+      "evidence_id": "EVID_933591",
+      "from": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "report": {
+        "summary": "This is second report",
+        "notes": "GOod"
+      },
+      "timestamp": "2026-04-27T13:12:46.630Z",
+      "tx_hash": "C692B7D7C0638045ABE7F22089A9829A5DD4491C6E79EC9D2BDCF2B7C45D8176"
+    },
+    {
+      "type": "EVIDENCE_TRANSFER_INITIATED",
+      "evidence_id": "EVID_933591",
+      "from": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "by": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "timestamp": "2026-04-27T13:12:46.631Z",
+      "tx_hash": "C692B7D7C0638045ABE7F22089A9829A5DD4491C6E79EC9D2BDCF2B7C45D8176"
     }
   ],
   "evidence": [
@@ -65,9 +186,51 @@
       "collected_by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
       "timestamp": "2026-04-25T08:11:02.713Z",
       "tx_hash": "EE16C36AA084E7F5A276EEF0284F464D33B839D1923E5C2A0B14FB1D76C2ED96"
+    },
+    {
+      "evidence_id": "EVID_933591",
+      "hash": "03b9589d394f49d91d5515bbb87518d9be5e30aafb0faa2010b606246655511b",
+      "category": "IMAGE",
+      "type": "image/png",
+      "collected_by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-27T07:12:13.591Z",
+      "tx_hash": "A08F85E38810B078FC46D3C79F79A62F556F2AAFC24831640D929A1DB55DC134"
     }
   ],
-  "reports": [],
+  "reports": [
+    {
+      "report_id": "REP_1777277880091",
+      "case_id": "CASE_914529",
+      "evidence_id": "EVID_933591",
+      "from": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "to": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "role_from": "CUSTODIAN",
+      "role_to": "ANALYST",
+      "report": {
+        "summary": "Sent for forensic analysis",
+        "notes": "Initial custody maintained, forwarding for analysis"
+      },
+      "report_hash": "34d14180a29d91457eef2232cffae30f8ba5c457de7d7b4ba292056b49b99f2d",
+      "linked_tx": "3FA50D9F48F482C5832B54DF84FBEB5FAB400F22FFA4E2374DF41846F54905EC",
+      "submitted_at": "2026-04-27T08:17:58.488Z"
+    },
+    {
+      "report_id": "REP_1777295566630",
+      "case_id": "CASE_914529",
+      "evidence_id": "EVID_933591",
+      "from": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "role_from": "ANALYST",
+      "role_to": "CUSTODIAN",
+      "report": {
+        "summary": "This is second report",
+        "notes": "GOod"
+      },
+      "report_hash": "2feb5ba3cb23efb28b698e51664b81f113a55ec5adf07759c6f9a0253b6cad95",
+      "linked_tx": "C692B7D7C0638045ABE7F22089A9829A5DD4491C6E79EC9D2BDCF2B7C45D8176",
+      "submitted_at": "2026-04-27T13:12:46.218Z"
+    }
+  ],
   "audit": [
     {
       "action": "CASE_CREATED",
@@ -78,10 +241,127 @@
     },
     {
       "action": "EVIDENCE_ADDED",
+      "evidence_id": "EVID_492705",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-25T08:08:12.705Z",
+      "tx_hash": "E59E4167EC1A183526C8BC729327A3D066A39DF11ACFEDEB5D773E9B163E4E2B"
+    },
+    {
+      "action": "EVIDENCE_ADDED",
       "evidence_id": "EVID_662713",
       "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
       "timestamp": "2026-04-25T08:11:02.713Z",
       "tx_hash": "EE16C36AA084E7F5A276EEF0284F464D33B839D1923E5C2A0B14FB1D76C2ED96"
+    },
+    {
+      "action": "EVIDENCE_TRANSFERRED",
+      "evidence_id": "EVID_662713",
+      "from": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "to": "pramaan1xxxxxxxxxxxxxxx",
+      "timestamp": "2026-04-25T12:49:52.829Z",
+      "tx_hash": "B5A12C9578FA18830E3524C201C72207808687962F09FD63BF094EAC7CEEEF2E"
+    },
+    {
+      "action": "EVIDENCE_TRANSFER_INITIATED",
+      "evidence_id": "EVID_492705",
+      "from": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-27T06:26:54.399Z",
+      "tx_hash": "A8020612C32C17E69476E98523F23E6A306BB2170B686314F587F6A15A5D87A6"
+    },
+    {
+      "action": "EVIDENCE_ACCEPTED",
+      "evidence_id": "EVID_492705",
+      "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-27T06:59:55.902Z",
+      "tx_hash": "B8E6B0629CE6AA0E0A0106897670C52D9E9C5E9C5AF571F064778695C48138F3"
+    },
+    {
+      "action": "EVIDENCE_ADDED",
+      "evidence_id": "EVID_933591",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-27T07:12:13.591Z",
+      "tx_hash": "A08F85E38810B078FC46D3C79F79A62F556F2AAFC24831640D929A1DB55DC134"
+    },
+    {
+      "action": "EVIDENCE_TRANSFER_INITIATED",
+      "evidence_id": "EVID_933591",
+      "from": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-27T08:11:05.646Z",
+      "tx_hash": "C32F16C0A68D2EF92D67D68E3863EE594CDF14EA6C8C538807EB7B9E73C3B177"
+    },
+    {
+      "action": "EVIDENCE_ACCEPTED",
+      "evidence_id": "EVID_933591",
+      "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-27T08:11:36.673Z",
+      "tx_hash": "69AB87C0C823BE109028A32206D53966D3FD1D2D07644A45B6B0A1C85F65000C"
+    },
+    {
+      "action": "EVIDENCE_TRANSFER_INITIATED",
+      "evidence_id": "EVID_933591",
+      "from": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "to": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "timestamp": "2026-04-27T08:17:58.488Z",
+      "tx_hash": "3FA50D9F48F482C5832B54DF84FBEB5FAB400F22FFA4E2374DF41846F54905EC"
+    },
+    {
+      "action": "EVIDENCE_ACCEPTED",
+      "evidence_id": "EVID_933591",
+      "by": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "timestamp": "2026-04-27T08:18:20.888Z",
+      "tx_hash": "443961305E26BDEBB763051AFE67C92262126A1FEFCE4DE14252710051D4E61F"
+    },
+    {
+      "action": "EVIDENCE_ACCEPTED",
+      "evidence_id": "EVID_933591",
+      "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-27T13:03:30.767Z",
+      "tx_hash": "A687DAFE8F84B9226DFA06F0DE19D4647D193FB0D11CF9CC86D1FAF8F8EA16CD"
+    },
+    {
+      "action": "EVIDENCE_TRANSFER_INITIATED",
+      "evidence_id": "EVID_933591",
+      "from": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "to": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "timestamp": "2026-04-27T13:12:02.622Z",
+      "tx_hash": "8A3A77F5B8245C03566B9CE16B8C6BBFE556E1B7175153B236EA9838569F1FD5"
+    },
+    {
+      "action": "EVIDENCE_ACCEPTED",
+      "evidence_id": "EVID_933591",
+      "by": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "timestamp": "2026-04-27T13:12:15.068Z",
+      "tx_hash": "6D0B118F96B7F971171818DEEA2ED19EFED88B67130601E217196D59378A811E"
+    },
+    {
+      "action": "EVIDENCE_TRANSFER_INITIATED",
+      "evidence_id": "EVID_933591",
+      "from": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-27T13:12:46.218Z",
+      "tx_hash": "C692B7D7C0638045ABE7F22089A9829A5DD4491C6E79EC9D2BDCF2B7C45D8176"
+    },
+    {
+      "action": "EVIDENCE_REPORT_SUBMITTED",
+      "evidence_id": "EVID_933591",
+      "from": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-27T13:12:46.218Z",
+      "tx_hash": "C692B7D7C0638045ABE7F22089A9829A5DD4491C6E79EC9D2BDCF2B7C45D8176"
+    }
+  ],
+  "members": [
+    {
+      "role": "CUSTODIAN",
+      "address": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "added_at": "2026-04-27T06:26:54.399Z"
+    },
+    {
+      "role": "ANALYST",
+      "address": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+      "added_at": "2026-04-27T08:17:58.488Z"
     }
   ]
 }

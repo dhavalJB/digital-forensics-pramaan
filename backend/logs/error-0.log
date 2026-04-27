@@ -1,0 +1,240 @@
+2026-04-27 18:40:27: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:27: const isFOtoCustodian =
+2026-04-27 18:40:27:       ^
+2026-04-27 18:40:27: 
+2026-04-27 18:40:27: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:27:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:27:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:27:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:27:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:27:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:27:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:27:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:27:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:27:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:27:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:27: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:27: const isFOtoCustodian =
+2026-04-27 18:40:27:       ^
+2026-04-27 18:40:27: 
+2026-04-27 18:40:27: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:27:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:27:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:27:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:27:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:27:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:27:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:27:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:27:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:27:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:27:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:27: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:27: const isFOtoCustodian =
+2026-04-27 18:40:27:       ^
+2026-04-27 18:40:27: 
+2026-04-27 18:40:27: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:27:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:27:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:27:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:27:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:27:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:27:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:27:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:27:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:27:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:27:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:27: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:27: const isFOtoCustodian =
+2026-04-27 18:40:27:       ^
+2026-04-27 18:40:27: 
+2026-04-27 18:40:27: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:27:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:27:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:27:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:27:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:27:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:27:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:27:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:27:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:27:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:27:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:28: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:28: const isFOtoCustodian =
+2026-04-27 18:40:28:       ^
+2026-04-27 18:40:28: 
+2026-04-27 18:40:28: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:28:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:28:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:28:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:28:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:28:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:28:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:28:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:28:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:28:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:28:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:28: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:28: const isFOtoCustodian =
+2026-04-27 18:40:28:       ^
+2026-04-27 18:40:28: 
+2026-04-27 18:40:28: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:28:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:28:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:28:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:28:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:28:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:28:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:28:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:28:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:28:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:28:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:28: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:28: const isFOtoCustodian =
+2026-04-27 18:40:28:       ^
+2026-04-27 18:40:28: 
+2026-04-27 18:40:28: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:28:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:28:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:28:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:28:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:28:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:28:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:28:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:28:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:28:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:28:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:28: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:28: const isFOtoCustodian =
+2026-04-27 18:40:28:       ^
+2026-04-27 18:40:28: 
+2026-04-27 18:40:28: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:28:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:28:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:28:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:28:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:28:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:28:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:28:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:28:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:28:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:28:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:28: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:28: const isFOtoCustodian =
+2026-04-27 18:40:28:       ^
+2026-04-27 18:40:28: 
+2026-04-27 18:40:28: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:28:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:28:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:28:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:28:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:28:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:28:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:28:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:28:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:28:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:28:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:28: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:28: const isFOtoCustodian =
+2026-04-27 18:40:28:       ^
+2026-04-27 18:40:28: 
+2026-04-27 18:40:28: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:28:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:28:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:28:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:28:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:28:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:28:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:28:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:28:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:28:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:28:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:28: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:28: const isFOtoCustodian =
+2026-04-27 18:40:28:       ^
+2026-04-27 18:40:28: 
+2026-04-27 18:40:28: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:28:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:28:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:28:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:28:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:28:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:28:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:28:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:28:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:28:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:28:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:28: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:28: const isFOtoCustodian =
+2026-04-27 18:40:28:       ^
+2026-04-27 18:40:28: 
+2026-04-27 18:40:28: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:28:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:28:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:28:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:28:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:28:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:28:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:28:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:28:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:28:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:28:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:29: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:29: const isFOtoCustodian =
+2026-04-27 18:40:29:       ^
+2026-04-27 18:40:29: 
+2026-04-27 18:40:29: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:29:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:29:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:29:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:29:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:29:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:29:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:29:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:29:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:29:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:29:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:29: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:29: const isFOtoCustodian =
+2026-04-27 18:40:29:       ^
+2026-04-27 18:40:29: 
+2026-04-27 18:40:29: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:29:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:29:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:29:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:29:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:29:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:29:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:29:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:29:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:29:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:29:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:29: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:29: const isFOtoCustodian =
+2026-04-27 18:40:29:       ^
+2026-04-27 18:40:29: 
+2026-04-27 18:40:29: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:29:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:29:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:29:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:29:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:29:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:29:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:29:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:29:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:29:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:29:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)
+2026-04-27 18:40:29: /home/dhaval/digital-forensics/backend/services/evidenceService.js:434
+2026-04-27 18:40:29: const isFOtoCustodian =
+2026-04-27 18:40:29:       ^
+2026-04-27 18:40:29: 
+2026-04-27 18:40:29: SyntaxError: Identifier 'isFOtoCustodian' has already been declared
+2026-04-27 18:40:29:     at wrapSafe (node:internal/modules/cjs/loader:1743:18)
+2026-04-27 18:40:29:     at Module._compile (node:internal/modules/cjs/loader:1786:20)
+2026-04-27 18:40:29:     at Object..js (node:internal/modules/cjs/loader:1943:10)
+2026-04-27 18:40:29:     at Module.load (node:internal/modules/cjs/loader:1533:32)
+2026-04-27 18:40:29:     at Module._load (node:internal/modules/cjs/loader:1335:12)
+2026-04-27 18:40:29:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-04-27 18:40:29:     at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)
+2026-04-27 18:40:29:     at Hook._require.Module.require (/home/dhaval/.nvm/versions/node/v24.14.1/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:101:39)
+2026-04-27 18:40:29:     at require (node:internal/modules/helpers:152:16)
+2026-04-27 18:40:29:     at Object.<anonymous> (/home/dhaval/digital-forensics/backend/controllers/evidenceController.js:1:25)

@@ -2,9 +2,13 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 const { spawn } = require("child_process");
-
+const { execPromise } = require("../core/executor");
 const CASES_DIR = path.join(__dirname, "../cases");
 const HOME = "/home/dhaval/digital-forensics/.pramaand";
+
+const { detectRoles } = require("./authService");
+const authService = require("./authService");
+
 
 // 🔐 HASH FILE
 function hashFile(buffer) {
@@ -288,5 +292,428 @@ caseData.audit.push({
     evidence_id: evidenceId,
     hash,
     tx_hash: proof.tx_hash,
+  };
+};
+
+function runTx(from, keyName, memo) {
+  return new Promise((resolve, reject) => {
+    const child = spawn("pramaand", [
+      "tx",
+      "bank",
+      "send",
+      from,
+      from,
+      "1stake",
+      "--note",
+      memo,
+      "--from",
+      keyName,
+      "--chain-id",
+      "pramaan-edu",
+      "--fees",
+      "1000stake",
+      "--keyring-backend",
+      "file",
+      "--home",
+      HOME,
+      "-y",
+    ]);
+
+    let output = "";
+
+    child.stdout.on("data", (d) => (output += d.toString()));
+    child.stderr.on("data", (d) => (output += d.toString()));
+
+    child.stdin.write("123456789\n");
+    child.stdin.end();
+
+    child.on("close", () => {
+      const match = output.match(/txhash:\s*([A-F0-9]+)/i);
+      if (!match) return reject(new Error("TX failed"));
+      resolve(match[1]);
+    });
+  });
+}
+
+
+exports.transferEvidence = async ({
+  caseId,
+  evidenceId,
+  from,
+  to,
+  keyName,
+  report, // 🔥 NEW
+}) => {
+  const evidencePath = path.join(
+    CASES_DIR,
+    caseId,
+    "evidence",
+    `${evidenceId}.json`
+  );
+
+  const casePath = path.join(CASES_DIR, `${caseId}.json`);
+
+  // 🔒 FILE VALIDATION
+  if (!fs.existsSync(evidencePath)) {
+    throw new Error("Evidence not found");
+  }
+
+  if (!fs.existsSync(casePath)) {
+    throw new Error("Case not found");
+  }
+
+  const evidence = JSON.parse(fs.readFileSync(evidencePath));
+  const caseData = JSON.parse(fs.readFileSync(casePath));
+
+  // 🔐 OWNERSHIP CHECK
+  if (evidence.ownership.current_owner !== from) {
+    throw new Error("Not current owner");
+  }
+
+  // 🔐 PREVENT MULTIPLE PENDING
+  if (evidence.ownership.pending_owner) {
+    throw new Error("Pending transfer exists");
+  }
+
+  // =========================
+  // 🔐 ROLE FLOW CONFIG
+  // =========================
+  const ROLE_FLOW = {
+    FORENSIC_OFFICER: ["CUSTODIAN"],
+    CUSTODIAN: ["ANALYST"],
+    ANALYST: ["CUSTODIAN"],
+  };
+
+  // =========================
+  // 🔍 DETECT ROLE
+  // =========================
+  const fromProfile = await authService.getIssuerProfile(from);
+  const toProfile = await authService.getIssuerProfile(to);
+
+  const fromRole = fromProfile?.role;
+  const toRole = toProfile?.role;
+
+  console.log("TRANSFER DEBUG:", {
+    from,
+    to,
+    fromRole,
+    toRole,
+  });
+
+  // ❌ ROLE NOT FOUND
+  if (!fromRole || !toRole) {
+    throw new Error("Role not assigned");
+  }
+
+  // =========================
+  // 🔥 HARD RULE: MUST GO THROUGH CUSTODIAN
+  // =========================
+  if (fromRole !== "CUSTODIAN" && toRole !== "CUSTODIAN") {
+    throw new Error("Transfer must go through Custodian");
+  }
+
+  // ❌ BLOCK BACK TO FO
+  if (toRole === "FORENSIC_OFFICER") {
+    throw new Error("Cannot transfer back to Forensic Officer");
+  }
+
+  // ❌ INVALID FLOW
+  if (!ROLE_FLOW[fromRole]?.includes(toRole)) {
+    throw new Error(
+      `Transfer not allowed: ${fromRole} → ${toRole}`
+    );
+  }
+
+  // =========================
+  // 🔥 REPORT RULE
+  // =========================
+
+
+const isAnalystSending = fromRole === "ANALYST";
+
+if (isAnalystSending && !report) {
+  throw new Error("Report required for analyst transfer");
+}
+
+  const now = new Date().toISOString();
+
+  // =========================
+  // 🔗 BLOCKCHAIN TX
+  // =========================
+
+  let reportHash = null;
+
+  if (report) {
+    reportHash = crypto
+      .createHash("sha256")
+      .update(JSON.stringify(report))
+      .digest("hex");
+  }
+
+  const memo = JSON.stringify({
+    type: "EVIDENCE_TRANSFER_INIT",
+    case_id: caseId,
+    evidence_id: evidenceId,
+    from,
+    to,
+    report_hash: reportHash,
+  });
+
+  const txHash = await runTx(from, keyName, memo);
+
+  // =========================
+  // 🧠 PENDING STATE
+  // =========================
+  evidence.ownership.pending_owner = to;
+
+  evidence.ownership.history.push({
+    action: "TRANSFER_INITIATED",
+    from,
+    to,
+    report: report || null,
+    timestamp: now,
+    tx_hash: txHash,
+  });
+
+  fs.writeFileSync(evidencePath, JSON.stringify(evidence, null, 2));
+
+  // =========================
+  // 📜 CASE TIMELINE
+  // =========================
+ // =========================
+// 📜 CASE TIMELINE
+// =========================
+if (!caseData.timeline) caseData.timeline = [];
+
+const baseTime = new Date();
+
+const reportTime = new Date(baseTime.getTime());
+const transferTime = new Date(baseTime.getTime() + 1);
+
+// 🔹 REPORT FIRST
+if (report) {
+  caseData.timeline.push({
+    type: "EVIDENCE_REPORT_SUBMITTED",
+    evidence_id: evidenceId,
+    from,
+    to,
+    report,
+    timestamp: reportTime.toISOString(),
+    tx_hash: txHash,
+  });
+}
+
+// 🔹 THEN TRANSFER
+caseData.timeline.push({
+  type: "EVIDENCE_TRANSFER_INITIATED",
+  evidence_id: evidenceId,
+  from,
+  to,
+  by: from,
+  timestamp: transferTime.toISOString(),
+  tx_hash: txHash,
+});
+
+
+
+  // =========================
+  // 📜 AUDIT LOG
+  // =========================
+  if (!caseData.audit) caseData.audit = [];
+
+  caseData.audit.push({
+    action: "EVIDENCE_TRANSFER_INITIATED",
+    evidence_id: evidenceId,
+    from,
+    to,
+    timestamp: now,
+    tx_hash: txHash,
+  });
+
+// =========================
+// 📄 REPORT STORAGE 
+// =========================
+if (report) {
+  if (!caseData.reports) caseData.reports = [];
+
+  const reportId = "REP_" + Date.now();
+
+  caseData.reports.push({
+  report_id: reportId,
+    case_id: caseId,
+    evidence_id: evidenceId,
+
+    from,
+    to,
+
+    role_from: fromRole,
+    role_to: toRole,
+
+    report,
+
+    report_hash: reportHash,
+
+    linked_tx: txHash,
+
+    submitted_at: now,
+  });
+
+  if (report) {
+  caseData.audit.push({
+    action: "EVIDENCE_REPORT_SUBMITTED",
+    evidence_id: evidenceId,
+    from,
+    to,
+    timestamp: now,
+    tx_hash: txHash,
+  });
+}
+
+}
+
+  // =========================
+  // 👁️ MEMBERS UPDATE
+  // =========================
+  if (!caseData.members) caseData.members = [];
+
+  const exists = caseData.members.find(
+    (m) => m.address === to
+  );
+
+  if (!exists) {
+    caseData.members.push({
+      role: toRole,
+      address: to,
+      added_at: now,
+    });
+  }
+
+  fs.writeFileSync(casePath, JSON.stringify(caseData, null, 2));
+
+  return {
+    success: true,
+    status: "PENDING",
+    message: "Transfer initiated. Awaiting acceptance.",
+    tx_hash: txHash,
+  };
+};
+
+exports.getIncomingTransfers = async (address) => {
+  const incoming = [];
+
+  const cases = fs.readdirSync(CASES_DIR);
+
+  for (const caseId of cases) {
+    const evidenceDir = path.join(CASES_DIR, caseId, "evidence");
+
+    if (!fs.existsSync(evidenceDir)) continue;
+
+    const files = fs.readdirSync(evidenceDir);
+
+    for (const file of files) {
+      const evidence = JSON.parse(
+        fs.readFileSync(path.join(evidenceDir, file))
+      );
+
+      if (evidence.ownership?.pending_owner === address) {
+        const lastTransfer = evidence.ownership.history
+          .slice()
+          .reverse()
+          .find((h) => h.action === "TRANSFER_INITIATED");
+
+        incoming.push({
+          case_id: caseId,
+          evidence_id: evidence.evidence_id,
+          from: lastTransfer?.from,
+          tx_hash: lastTransfer?.tx_hash,
+          timestamp: lastTransfer?.timestamp,
+        });
+      }
+    }
+  }
+
+  return {
+    success: true,
+    transfers: incoming,
+  };
+};
+
+// 🔽 ACCEPT TRANSFER
+exports.acceptEvidenceTransfer = async ({
+  caseId,
+  evidenceId,
+  by,
+  keyName,
+}) => {
+  const evidencePath = path.join(
+    CASES_DIR,
+    caseId,
+    "evidence",
+    `${evidenceId}.json`
+  );
+
+  const casePath = path.join(CASES_DIR, `${caseId}.json`);
+
+  if (!fs.existsSync(evidencePath)) {
+    throw new Error("Evidence not found");
+  }
+
+  const evidence = JSON.parse(fs.readFileSync(evidencePath));
+  const caseData = JSON.parse(fs.readFileSync(casePath));
+
+  // 🔐 VALIDATION
+  if (evidence.ownership.pending_owner !== by) {
+    throw new Error("Not authorized to accept");
+  }
+
+  const now = new Date().toISOString();
+
+  // 🔗 BLOCKCHAIN TX
+  const memo = JSON.stringify({
+    type: "EVIDENCE_TRANSFER_ACCEPT",
+    case_id: caseId,
+    evidence_id: evidenceId,
+    by,
+  });
+
+  const txHash = await runTx(by, keyName, memo);
+
+  // ✅ FINAL OWNERSHIP
+  evidence.ownership.current_owner = by;
+  delete evidence.ownership.pending_owner;
+
+  evidence.ownership.history.push({
+    action: "TRANSFER_ACCEPTED",
+    by,
+    timestamp: now,
+    tx_hash: txHash,
+  });
+
+  fs.writeFileSync(evidencePath, JSON.stringify(evidence, null, 2));
+
+  // 📜 CASE TIMELINE
+  caseData.timeline.push({
+    type: "EVIDENCE_ACCEPTED",
+    evidence_id: evidenceId,
+    by,
+    timestamp: now,
+    tx_hash: txHash,
+  });
+
+  // 📜 AUDIT
+  caseData.audit.push({
+    action: "EVIDENCE_ACCEPTED",
+    evidence_id: evidenceId,
+    by,
+    timestamp: now,
+    tx_hash: txHash,
+  });
+
+  fs.writeFileSync(casePath, JSON.stringify(caseData, null, 2));
+
+  return {
+    success: true,
+    message: "Evidence accepted successfully",
+    tx_hash: txHash,
   };
 };

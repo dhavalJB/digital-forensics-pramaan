@@ -17,12 +17,20 @@
     "lng": 71.22
   },
   "ownership": {
-    "current_owner": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+    "current_owner": "pramaan1xxxxxxxxxxxxxxx",
     "history": [
       {
         "owner": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
         "action": "COLLECTED",
         "timestamp": "2026-04-25T08:11:02.713Z"
+      },
+      {
+        "owner": "pramaan1xxxxxxxxxxxxxxx",
+        "action": "TRANSFERRED",
+        "from": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+        "to": "pramaan1xxxxxxxxxxxxxxx",
+        "timestamp": "2026-04-25T12:49:52.829Z",
+        "tx_hash": "B5A12C9578FA18830E3524C201C72207808687962F09FD63BF094EAC7CEEEF2E"
       }
     ]
   },

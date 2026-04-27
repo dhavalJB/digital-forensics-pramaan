@@ -18,4 +18,8 @@ router.get(
   evidenceController.getEvidenceByCase
 );
 
+router.post("/evidence/transfer", evidenceController.transferEvidence);
+router.post("/evidence/incoming", evidenceController.getIncomingTransfers);
+router.post("/evidence/accept", evidenceController.acceptTransfer);
+
 module.exports = router;

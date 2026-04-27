@@ -1,26 +1,120 @@
-2026-04-25 13:51:17: 🚀 PRAMAAN SYSTEM INITIALIZING...
-2026-04-25 13:51:17: 🔥 SCANNER STARTED
-2026-04-25 13:51:17: 🚀 INDEXER STARTED
-2026-04-25 13:51:17: 🚀 Pramaan Backend Online: http://localhost:4000
-2026-04-25 13:51:17: ⚡ Starting from: 4279
-2026-04-25 13:56:32: 🚀 PRAMAAN SYSTEM INITIALIZING...
-2026-04-25 13:56:32: 🔥 SCANNER STARTED
-2026-04-25 13:56:32: 🚀 INDEXER STARTED
-2026-04-25 13:56:32: 🚀 Pramaan Backend Online: http://localhost:4000
-2026-04-25 13:56:33: ⚡ Starting from: 4340
-2026-04-25 14:12:07: 📂 Serving static files from: /home/dhaval/digital-forensics/backend/cases
-2026-04-25 14:12:07: 🚀 PRAMAAN SYSTEM INITIALIZING...
-2026-04-25 14:12:07: 🔥 SCANNER STARTED
-2026-04-25 14:12:07: 🚀 INDEXER STARTED
-2026-04-25 14:12:07: 🚀 Pramaan Backend Online: http://localhost:4000
-2026-04-25 14:12:08: ⚡ Starting from: 4520
-2026-04-25 14:14:08: ✅ Identity Verified for pramaan15ey2xpyxddkec22p3uf02lvyrzgyadv6mk8du3: National Digital Forensics Authority
-2026-04-25 14:14:10: ✅ Identity Verified for pramaan15ey2xpyxddkec22p3uf02lvyrzgyadv6mk8du3: National Digital Forensics Authority
-2026-04-25 14:16:52: ✅ Identity Verified for pramaan15ey2xpyxddkec22p3uf02lvyrzgyadv6mk8du3: National Digital Forensics Authority
-2026-04-25 14:16:53: ✅ Identity Verified for pramaan15ey2xpyxddkec22p3uf02lvyrzgyadv6mk8du3: National Digital Forensics Authority
-2026-04-25 17:59:17: 📂 Serving static files from: /home/dhaval/digital-forensics/backend/cases
-2026-04-25 17:59:17: 🚀 PRAMAAN SYSTEM INITIALIZING...
-2026-04-25 17:59:17: 🔥 SCANNER STARTED
-2026-04-25 17:59:17: 🚀 INDEXER STARTED
-2026-04-25 17:59:17: 🚀 Pramaan Backend Online: http://localhost:4000
-2026-04-25 17:59:18: ⚡ Starting from: 4611
+2026-04-27 18:25:29: 📂 Serving static files from: /home/dhaval/digital-forensics/backend/cases
+2026-04-27 18:25:29: 🚀 PRAMAAN SYSTEM INITIALIZING...
+2026-04-27 18:25:29: 🔥 SCANNER STARTED
+2026-04-27 18:25:29: 🚀 INDEXER STARTED
+2026-04-27 18:25:29: 🚀 Pramaan Backend Online: http://localhost:4000
+2026-04-27 18:25:29: ⚡ Starting from: 8114
+2026-04-27 18:25:37: BODY: {
+2026-04-27 18:25:37:   case_id: 'CASE_914529',
+2026-04-27 18:25:37:   evidence_id: 'EVID_933591',
+2026-04-27 18:25:37:   from: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:25:37:   to: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:25:37:   keyName: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:25:37:   report: { summary: 'This report were clean', notes: 'All good' }
+2026-04-27 18:25:37: }
+2026-04-27 18:30:15: BODY: {
+2026-04-27 18:30:15:   case_id: 'CASE_914529',
+2026-04-27 18:30:15:   evidence_id: 'EVID_933591',
+2026-04-27 18:30:15:   from: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:30:15:   to: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:30:15:   keyName: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:30:15:   report: { summary: 'This report were clean', notes: 'All good' }
+2026-04-27 18:30:15: }
+2026-04-27 18:30:38: 📂 Serving static files from: /home/dhaval/digital-forensics/backend/cases
+2026-04-27 18:30:38: 🚀 PRAMAAN SYSTEM INITIALIZING...
+2026-04-27 18:30:38: 🔥 SCANNER STARTED
+2026-04-27 18:30:38: 🚀 INDEXER STARTED
+2026-04-27 18:30:38: 🚀 Pramaan Backend Online: http://localhost:4000
+2026-04-27 18:30:38: ⚡ Starting from: 8172
+2026-04-27 18:30:40: BODY: {
+2026-04-27 18:30:40:   case_id: 'CASE_914529',
+2026-04-27 18:30:40:   evidence_id: 'EVID_933591',
+2026-04-27 18:30:40:   from: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:30:40:   to: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:30:40:   keyName: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:30:40:   report: { summary: 'This report were clean', notes: 'All good' }
+2026-04-27 18:30:40: }
+2026-04-27 18:33:24: 📂 Serving static files from: /home/dhaval/digital-forensics/backend/cases
+2026-04-27 18:33:24: 🚀 PRAMAAN SYSTEM INITIALIZING...
+2026-04-27 18:33:24: 🔥 SCANNER STARTED
+2026-04-27 18:33:24: 🚀 INDEXER STARTED
+2026-04-27 18:33:24: 🚀 Pramaan Backend Online: http://localhost:4000
+2026-04-27 18:33:24: ⚡ Starting from: 8203
+2026-04-27 18:34:04: BODY: {
+2026-04-27 18:34:04:   case_id: 'CASE_914529',
+2026-04-27 18:34:04:   evidence_id: 'EVID_933591',
+2026-04-27 18:34:04:   from: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:34:04:   to: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:34:04:   keyName: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4'
+2026-04-27 18:34:04: }
+2026-04-27 18:34:05: TRANSFER DEBUG: {
+2026-04-27 18:34:05:   from: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:34:05:   to: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:34:05:   fromRole: 'CUSTODIAN',
+2026-04-27 18:34:05:   toRole: 'ANALYST'
+2026-04-27 18:34:05: }
+2026-04-27 18:36:24: BODY: {
+2026-04-27 18:36:24:   case_id: 'CASE_914529',
+2026-04-27 18:36:24:   evidence_id: 'EVID_933591',
+2026-04-27 18:36:24:   from: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:36:24:   to: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:36:24:   keyName: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4'
+2026-04-27 18:36:24: }
+2026-04-27 18:36:27: TRANSFER DEBUG: {
+2026-04-27 18:36:27:   from: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:36:27:   to: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:36:27:   fromRole: 'CUSTODIAN',
+2026-04-27 18:36:27:   toRole: 'ANALYST'
+2026-04-27 18:36:27: }
+2026-04-27 18:36:46: BODY: {
+2026-04-27 18:36:46:   case_id: 'CASE_914529',
+2026-04-27 18:36:46:   evidence_id: 'EVID_933591',
+2026-04-27 18:36:46:   from: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:36:46:   to: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:36:46:   keyName: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4'
+2026-04-27 18:36:46: }
+2026-04-27 18:36:47: TRANSFER DEBUG: {
+2026-04-27 18:36:47:   from: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:36:47:   to: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:36:47:   fromRole: 'CUSTODIAN',
+2026-04-27 18:36:47:   toRole: 'ANALYST'
+2026-04-27 18:36:47: }
+2026-04-27 18:40:39: 📂 Serving static files from: /home/dhaval/digital-forensics/backend/cases
+2026-04-27 18:40:39: 🚀 PRAMAAN SYSTEM INITIALIZING...
+2026-04-27 18:40:39: 🔥 SCANNER STARTED
+2026-04-27 18:40:39: 🚀 INDEXER STARTED
+2026-04-27 18:40:39: 🚀 Pramaan Backend Online: http://localhost:4000
+2026-04-27 18:40:39: ⚡ Starting from: 8285
+2026-04-27 18:41:56: 📂 Serving static files from: /home/dhaval/digital-forensics/backend/cases
+2026-04-27 18:41:56: 🚀 PRAMAAN SYSTEM INITIALIZING...
+2026-04-27 18:41:56: 🔥 SCANNER STARTED
+2026-04-27 18:41:56: 🚀 INDEXER STARTED
+2026-04-27 18:41:56: 🚀 Pramaan Backend Online: http://localhost:4000
+2026-04-27 18:41:57: ⚡ Starting from: 8299
+2026-04-27 18:42:01: BODY: {
+2026-04-27 18:42:01:   case_id: 'CASE_914529',
+2026-04-27 18:42:01:   evidence_id: 'EVID_933591',
+2026-04-27 18:42:01:   from: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:42:01:   to: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:42:01:   keyName: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4'
+2026-04-27 18:42:01: }
+2026-04-27 18:42:02: TRANSFER DEBUG: {
+2026-04-27 18:42:02:   from: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:42:02:   to: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:42:02:   fromRole: 'CUSTODIAN',
+2026-04-27 18:42:02:   toRole: 'ANALYST'
+2026-04-27 18:42:02: }
+2026-04-27 18:42:45: BODY: {
+2026-04-27 18:42:45:   case_id: 'CASE_914529',
+2026-04-27 18:42:45:   evidence_id: 'EVID_933591',
+2026-04-27 18:42:45:   from: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:42:45:   to: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:42:45:   keyName: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:42:45:   report: { summary: 'This is second report', notes: 'GOod' }
+2026-04-27 18:42:45: }
+2026-04-27 18:42:46: TRANSFER DEBUG: {
+2026-04-27 18:42:46:   from: 'pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7',
+2026-04-27 18:42:46:   to: 'pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4',
+2026-04-27 18:42:46:   fromRole: 'ANALYST',
+2026-04-27 18:42:46:   toRole: 'CUSTODIAN'
+2026-04-27 18:42:46: }

@@ -17,12 +17,25 @@
     "lng": 71.22
   },
   "ownership": {
-    "current_owner": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+    "current_owner": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
     "history": [
       {
         "owner": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
         "action": "COLLECTED",
         "timestamp": "2026-04-25T08:08:12.705Z"
+      },
+      {
+        "action": "TRANSFER_INITIATED",
+        "from": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+        "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+        "timestamp": "2026-04-27T06:26:54.399Z",
+        "tx_hash": "A8020612C32C17E69476E98523F23E6A306BB2170B686314F587F6A15A5D87A6"
+      },
+      {
+        "action": "TRANSFER_ACCEPTED",
+        "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+        "timestamp": "2026-04-27T06:59:55.902Z",
+        "tx_hash": "B8E6B0629CE6AA0E0A0106897670C52D9E9C5E9C5AF571F064778695C48138F3"
       }
     ]
   },

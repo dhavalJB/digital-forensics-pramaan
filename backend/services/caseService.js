@@ -31,13 +31,23 @@ exports.getCasesByAddress = (address, role) => {
 
   if (!address) return [];
 
+  // 🔓 SUPERVISOR = full access
   if (role === "SUPERVISOR") {
     return cases;
   }
 
-  return cases.filter(
-    (c) => c.meta?.assigned_io === address
-  );
+  return cases.filter((c) => {
+    // ✅ IO (original assignment)
+    if (c.meta?.assigned_io === address) return true;
+
+    // ✅ Creator
+    if (c.meta?.created_by === address) return true;
+
+    // ✅ Members (CUSTODIAN / ANALYST / VERIFIER)
+    if (c.members?.some((m) => m.address === address)) return true;
+
+    return false;
+  });
 };
 
 // 🔍 GET SINGLE CASE (ROOT)

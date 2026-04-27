@@ -1,0 +1,108 @@
+{
+  "evidence_id": "EVID_933591",
+  "case_id": "CASE_914529",
+  "type": "image/png",
+  "category": "IMAGE",
+  "file_name": "EVID_933591.png",
+  "size": 267568,
+  "hash": "03b9589d394f49d91d5515bbb87518d9be5e30aafb0faa2010b606246655511b",
+  "integrity": {
+    "hash_algorithm": "SHA256",
+    "hash_verified": true
+  },
+  "collected_by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+  "collected_at": "2026-04-27T07:12:13.591Z",
+  "location": {
+    "lat": null,
+    "lng": null
+  },
+  "ownership": {
+    "current_owner": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+    "history": [
+      {
+        "owner": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+        "action": "COLLECTED",
+        "timestamp": "2026-04-27T07:12:13.591Z"
+      },
+      {
+        "action": "TRANSFER_INITIATED",
+        "from": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+        "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+        "report": null,
+        "timestamp": "2026-04-27T08:11:05.646Z",
+        "tx_hash": "C32F16C0A68D2EF92D67D68E3863EE594CDF14EA6C8C538807EB7B9E73C3B177"
+      },
+      {
+        "action": "TRANSFER_ACCEPTED",
+        "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+        "timestamp": "2026-04-27T08:11:36.673Z",
+        "tx_hash": "69AB87C0C823BE109028A32206D53966D3FD1D2D07644A45B6B0A1C85F65000C"
+      },
+      {
+        "action": "TRANSFER_INITIATED",
+        "from": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+        "to": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+        "report": {
+          "summary": "Sent for forensic analysis",
+          "notes": "Initial custody maintained, forwarding for analysis"
+        },
+        "timestamp": "2026-04-27T08:17:58.488Z",
+        "tx_hash": "3FA50D9F48F482C5832B54DF84FBEB5FAB400F22FFA4E2374DF41846F54905EC"
+      },
+      {
+        "action": "TRANSFER_ACCEPTED",
+        "by": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+        "timestamp": "2026-04-27T08:18:20.888Z",
+        "tx_hash": "443961305E26BDEBB763051AFE67C92262126A1FEFCE4DE14252710051D4E61F"
+      },
+      {
+        "action": "TRANSFER_INITIATED",
+        "from": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+        "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+        "report": {
+          "summary": "This report were clean",
+          "notes": "All good"
+        },
+        "timestamp": "2026-04-27T12:43:31.686Z",
+        "tx_hash": "FF17D2485FEC9F33BCFE3C356986DDE946AB2F06E8CF9AE2AE3833789F8017FE"
+      },
+      {
+        "action": "TRANSFER_ACCEPTED",
+        "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+        "timestamp": "2026-04-27T13:03:30.767Z",
+        "tx_hash": "A687DAFE8F84B9226DFA06F0DE19D4647D193FB0D11CF9CC86D1FAF8F8EA16CD"
+      },
+      {
+        "action": "TRANSFER_INITIATED",
+        "from": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+        "to": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+        "report": null,
+        "timestamp": "2026-04-27T13:12:02.622Z",
+        "tx_hash": "8A3A77F5B8245C03566B9CE16B8C6BBFE556E1B7175153B236EA9838569F1FD5"
+      },
+      {
+        "action": "TRANSFER_ACCEPTED",
+        "by": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+        "timestamp": "2026-04-27T13:12:15.068Z",
+        "tx_hash": "6D0B118F96B7F971171818DEEA2ED19EFED88B67130601E217196D59378A811E"
+      },
+      {
+        "action": "TRANSFER_INITIATED",
+        "from": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+        "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+        "report": {
+          "summary": "This is second report",
+          "notes": "GOod"
+        },
+        "timestamp": "2026-04-27T13:12:46.218Z",
+        "tx_hash": "C692B7D7C0638045ABE7F22089A9829A5DD4491C6E79EC9D2BDCF2B7C45D8176"
+      }
+    ],
+    "pending_owner": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4"
+  },
+  "chain_proof": {
+    "tx_hash": "A08F85E38810B078FC46D3C79F79A62F556F2AAFC24831640D929A1DB55DC134",
+    "block_height": "6895",
+    "timestamp": "2026-04-27T07:12:12Z"
+  }
+}
