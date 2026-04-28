@@ -3,6 +3,8 @@ const cors = require("cors");
 const { startScanner } = require("./core/scanner");
 const { startIndexer } = require("./indexer/scanner");
 const path = require("path"); 
+const multer = require("multer");
+const upload = multer();
 
 // Import Routes
 const explorerRoutes = require("./routes/explorer");
@@ -21,7 +23,7 @@ const verificationRoutes = require("./routes/verification");
 const authRoutes = require("./routes/auth");
 const caseRoutes = require("./routes/caseRoutes");
 const evidenceRoutes = require("./routes/evidenceRoutes");
-
+const courtRoutes = require("./routes/courtRoutes");
 
 const app = express();
 
@@ -51,6 +53,11 @@ app.use("/", verificationRoutes);
 app.use("/", authRoutes);
 app.use("/", caseRoutes);
 app.use("/", evidenceRoutes);
+app.use("/court", require("./routes/courtRoutes"));
+
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // 🔥 Start Background Engines
 let SYSTEM_STARTED = false;

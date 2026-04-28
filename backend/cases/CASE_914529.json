@@ -166,6 +166,13 @@
       "by": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
       "timestamp": "2026-04-27T13:12:46.631Z",
       "tx_hash": "C692B7D7C0638045ABE7F22089A9829A5DD4491C6E79EC9D2BDCF2B7C45D8176"
+    },
+    {
+      "type": "EVIDENCE_ACCEPTED",
+      "evidence_id": "EVID_933591",
+      "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-28T04:47:44.646Z",
+      "tx_hash": "4C22B7F3ED9F4F7F52D94359DD30C14F7AA6AB85D990824460BA6F7BD5182073"
     }
   ],
   "evidence": [
@@ -350,6 +357,13 @@
       "to": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
       "timestamp": "2026-04-27T13:12:46.218Z",
       "tx_hash": "C692B7D7C0638045ABE7F22089A9829A5DD4491C6E79EC9D2BDCF2B7C45D8176"
+    },
+    {
+      "action": "EVIDENCE_ACCEPTED",
+      "evidence_id": "EVID_933591",
+      "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+      "timestamp": "2026-04-28T04:47:44.646Z",
+      "tx_hash": "4C22B7F3ED9F4F7F52D94359DD30C14F7AA6AB85D990824460BA6F7BD5182073"
     }
   ],
   "members": [

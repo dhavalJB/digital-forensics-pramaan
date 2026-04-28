@@ -17,7 +17,7 @@
     "lng": null
   },
   "ownership": {
-    "current_owner": "pramaan1wklukw963kfnkmqa6ruur5hyatpplkt28pgyu7",
+    "current_owner": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
     "history": [
       {
         "owner": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
@@ -96,9 +96,14 @@
         },
         "timestamp": "2026-04-27T13:12:46.218Z",
         "tx_hash": "C692B7D7C0638045ABE7F22089A9829A5DD4491C6E79EC9D2BDCF2B7C45D8176"
+      },
+      {
+        "action": "TRANSFER_ACCEPTED",
+        "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
+        "timestamp": "2026-04-28T04:47:44.646Z",
+        "tx_hash": "4C22B7F3ED9F4F7F52D94359DD30C14F7AA6AB85D990824460BA6F7BD5182073"
       }
-    ],
-    "pending_owner": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4"
+    ]
   },
   "chain_proof": {
     "tx_hash": "A08F85E38810B078FC46D3C79F79A62F556F2AAFC24831640D929A1DB55DC134",
