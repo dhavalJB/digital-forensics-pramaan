@@ -12,12 +12,11 @@ exports.getCases = async (req, res) => {
       });
     }
 
-    // 🔍 GET ROLE FROM PROFILE
     const profile = await authService.getIssuerProfile(address);
-
     const role = profile?.profile?.role || "USER";
 
-    const cases = caseService.getCasesByAddress(address, role);
+    // ✅ FIX HERE
+    const cases = await caseService.getCasesByAddress(address, role);
 
     res.json({
       success: true,
@@ -32,11 +31,11 @@ exports.getCases = async (req, res) => {
   }
 };
 
-exports.getCaseById = (req, res) => {
+exports.getCaseById = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const caseData = caseService.getCaseById(id);
+    const caseData = await caseService.getCaseById(id); // ✅ FIX
 
     if (!caseData) {
       return res.status(404).json({
