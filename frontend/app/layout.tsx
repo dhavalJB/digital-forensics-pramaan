@@ -8,25 +8,36 @@ import { SessionProvider, useSession } from "./context/SessionContext";
 function AppLayout({ children }: { children: React.ReactNode }) {
   const { session } = useSession();
 
+  // Authentication / Login Layout
   if (!session) {
     return (
-      <main className="h-screen overflow-hidden bg-[#F4F7FB] flex items-center justify-center">
-        {children}
+      <main className="h-screen w-screen overflow-hidden bg-slate-900 flex items-center justify-center p-6">
+        <div className="w-full max-w-md">
+          {children}
+        </div>
       </main>
     );
   }
 
+  // Primary Forensic Workspace Layout
   return (
-    <div className="h-screen overflow-hidden bg-[#F4F7FB] p-4 flex gap-4">
+    <div className="h-screen w-screen overflow-hidden bg-slate-100 p-4 flex gap-4">
+      {/* PERSISTENT NAVIGATION */}
       <Sidebar />
 
-      <div className="flex-1 flex flex-col gap-4 h-full">
+      <div className="flex-1 flex flex-col gap-4 h-full min-w-0">
+        {/* SESSION & STATUS BAR */}
         <Header />
 
-        <main className="flex-1 bg-white rounded-2xl border border-[#E3E8EF] shadow-sm p-6 overflow-hidden">
-          <div className="h-full overflow-y-auto pr-2">
+        {/* MAIN DATA VIEWPORT */}
+        <main className="flex-1 bg-white rounded-xl border border-slate-200 shadow-xl shadow-slate-200/50 overflow-hidden relative">
+          {/* Internal Scrollable Canvas */}
+          <div className="h-full w-full overflow-y-auto p-6 custom-scrollbar">
             {children}
           </div>
+
+          {/* Subdued Bottom Edge Detail for Professionalism */}
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-slate-900 to-emerald-500 opacity-20"></div>
         </main>
       </div>
     </div>
@@ -39,11 +50,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="h-screen overflow-hidden bg-[#F4F7FB] text-[#0F172A]">
+    <html lang="en" className="antialiased">
+      <head>
+        <title>PRAMAAN | Digital Evidence Management</title>
+      </head>
+      <body className="h-screen overflow-hidden bg-slate-100 text-slate-900 selection:bg-blue-100">
         <SessionProvider>
           <AppLayout>{children}</AppLayout>
         </SessionProvider>
+
+        {/* Global CSS Overrides for Forensic UI Feel */}
+        <style jsx global>{`
+          .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+          }
+          .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+          }
+        `}</style>
       </body>
     </html>
   );

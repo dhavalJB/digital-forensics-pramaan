@@ -15,10 +15,24 @@ export default function Home() {
     }
   }, [session, loading]);
 
+  // Forensic Loading State
   if (loading) {
     return (
-      <div className="h-screen overflow-hidden bg-[#F4F7FB] flex items-center justify-center text-gray-500">
-        Loading...
+      <div className="h-screen w-full bg-slate-900 flex flex-col items-center justify-center gap-4">
+        {/* Tactical Spinner */}
+        <div className="relative w-12 h-12">
+          <div className="absolute inset-0 border-4 border-blue-600/20 rounded-full"></div>
+          <div className="absolute inset-0 border-4 border-t-blue-500 rounded-full animate-spin"></div>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-[10px] font-mono text-blue-400 uppercase tracking-[0.3em] animate-pulse">
+            Establishing Secure Link
+          </p>
+          <p className="text-[9px] font-mono text-slate-500 uppercase mt-2">
+            Synchronizing with PRAMAAN Node...
+          </p>
+        </div>
       </div>
     );
   }
@@ -26,7 +40,10 @@ export default function Home() {
   if (!session) return null;
 
   return (
-    <div className="h-full overflow-hidden">
+    <div className="h-full w-full overflow-hidden">
+      {/* The Dashboard component now renders within the 
+          Main Workspace defined in the AppLayout 
+      */}
       <Dashboard />
     </div>
   );
