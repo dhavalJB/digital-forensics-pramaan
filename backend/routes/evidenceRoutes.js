@@ -12,10 +12,14 @@ router.post(
   evidenceController.uploadEvidence
 );
 
-// ✅ FIX HERE — use evidenceController
 router.get(
   "/case/:id/evidence",
   evidenceController.getEvidenceByCase
+);
+
+router.get(
+  "/case/:id/evidence/:eid",
+  evidenceController.getSingleEvidence
 );
 
 router.post("/evidence/transfer", evidenceController.transferEvidence);

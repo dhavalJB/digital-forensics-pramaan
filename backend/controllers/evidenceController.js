@@ -1,5 +1,11 @@
+
+const fs = require("fs");
+const path = require("path");
+
 const evidenceService = require("../services/evidenceService");
 const caseService = require("../services/caseService");
+
+const CASES_DIR = path.join(__dirname, "../cases");
 
 // ==============================
 // UPLOAD
@@ -118,6 +124,39 @@ exports.acceptTransfer = async (req, res) => {
     res.json({
       success: false,
       error: err.message,
+    });
+  }
+};
+
+exports.getSingleEvidence = (req, res) => {
+  try {
+    const { id, eid } = req.params;
+
+    const filePath = path.join(
+      CASES_DIR,
+      id,
+      "evidence",
+      `${eid}.json`
+    );
+
+    if (!fs.existsSync(filePath)) {
+      return res.status(404).json({
+        success: false,
+        error: "Evidence not found",
+      });
+    }
+
+    const evidence = JSON.parse(fs.readFileSync(filePath));
+
+    return res.json({
+      success: true,
+      evidence,
+    });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({
+      success: false,
+      error: "Failed to load evidence",
     });
   }
 };

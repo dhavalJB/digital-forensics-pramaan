@@ -50,268 +50,277 @@ export default function CaseDetail() {
       } else {
         alert(data.error);
       }
-    } catch (err) {
-      console.error(err);
+    } catch {
       alert("Upload failed");
     }
   };
 
-  if (!caseData) return <div>Loading...</div>;
+  const formatDate = (val: any) => {
+    if (!val) return "—";
 
-  // 🔥 SAFE HELPERS
+    const d = new Date(val);
+    if (isNaN(d.getTime())) return "—";
+
+    return d.toLocaleString("en-IN", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  };
+
+  if (!caseData) return <div className="p-6">Loading...</div>;
+
   const getName = (val: any) =>
     typeof val === "object" ? val?.officer_name : val;
 
   return (
-    <div className="p-6 space-y-4">
+    <div className="h-full overflow-hidden flex flex-col gap-4">
 
       {/* HEADER */}
-      <h1 className="text-2xl font-bold">
-        {caseData?.meta?.title}
-      </h1>
-
-      {/* CASE INFO */}
-      <div className="bg-white p-5 rounded shadow">
-        <h2 className="font-semibold mb-2">Case Information</h2>
-
-        <div><strong>Description:</strong> {caseData?.meta?.description}</div>
-        <div><strong>Type:</strong> {caseData?.meta?.case_type}</div>
-        <div><strong>Priority:</strong> {caseData?.meta?.priority}</div>
-        <div><strong>Status:</strong> {caseData?.meta?.status}</div>
-      </div>
-
-      {/* LOCATION */}
-      <div className="bg-white p-5 rounded shadow">
-        <h2 className="font-semibold mb-2">Location</h2>
-
-        <div>{caseData?.meta?.location?.place}</div>
-        <div>{caseData?.meta?.location?.platform}</div>
+      <div className="flex justify-between items-start">
         <div>
-          {caseData?.meta?.location?.city}, {caseData?.meta?.location?.state}
-        </div>
-        <div>{caseData?.meta?.location?.country}</div>
-      </div>
-
-      {/* TIME */}
-      <div className="bg-white p-5 rounded shadow">
-        <h2 className="font-semibold mb-2">Time Details</h2>
-
-        <div><strong>Incident:</strong> {caseData?.meta?.incident_time}</div>
-        <div><strong>Created:</strong> {caseData?.meta?.created_at}</div>
-      </div>
-
-      {/* OFFICERS */}
-      <div className="bg-white p-5 rounded shadow">
-        <h2 className="font-semibold mb-2">Officers</h2>
-
-        <div>
-          <strong>Investigating Officer:</strong>{" "}
-          {getName(caseData?.officers?.investigating_officer)}
-        </div>
-
-      </div>
-
-      <div className="bg-white p-5 rounded shadow">
-        <h2 className="font-semibold mb-2">Team Members</h2>
-
-        {(caseData.members || []).length === 0 ? (
-          <div className="text-sm text-gray-500">No members assigned</div>
-        ) : (
-          caseData.members.map((m: any, i: number) => {
-            const p = m.profile;
-
-            return (
-              <div key={i} className="border-b py-3">
-
-                {/* NAME + ROLE */}
-                <div className="font-semibold">
-                  {p?.officer_name || "Unknown"}
-                  <span className="text-sm text-gray-500"> ({m.role})</span>
-                </div>
-
-                {/* RANK + DEPARTMENT */}
-                <div className="text-sm text-gray-600">
-                  {p?.rank} • {p?.department}
-                </div>
-
-                {/* BADGE */}
-                <div className="text-xs">
-                  Badge ID: {p?.badge_id}
-                </div>
-
-                {/* JURISDICTION */}
-                <div className="text-xs">
-                  Jurisdiction: {p?.jurisdiction}
-                </div>
-
-
-
-                {/* WALLET */}
-                <div className="text-xs text-gray-400">
-                  Wallet: {p?.address}
-                </div>
-
-              </div>
-            );
-          })
-        )}
-      </div>
-
-      {/* BLOCKCHAIN */}
-      <div className="bg-white p-5 rounded shadow">
-        <h2 className="font-semibold mb-2">Blockchain Proof</h2>
-
-        <div><strong>Tx Hash:</strong> {caseData?.chain_proof?.case_creation?.tx_hash}</div>
-        <div><strong>Block:</strong> {caseData?.chain_proof?.case_creation?.block_height}</div>
-        <div><strong>Data Hash:</strong> {caseData?.chain_proof?.case_creation?.data_hash}</div>
-      </div>
-
-      {/* TIMELINE */}
-      <div className="bg-white p-5 rounded shadow">
-        <h2 className="font-semibold mb-2">Chain of Custody</h2>
-
-        {(caseData?.timeline || []).length === 0 ? (
-          <div className="text-sm text-gray-500">No custody events</div>
-        ) : (
-          caseData.timeline.map((t: any, i: number) => (
-            <div key={i} className="text-sm border-b py-2">
-              <div><strong>{t.type}</strong></div>
-
-              <div>
-                By: {getName(t.by_profile || t.by)}
-              </div>
-
-              {(t.to_profile || t.assigned_to) && (
-                <div>
-                  Assigned To: {getName(t.to_profile || t.assigned_to)}
-                </div>
-              )}
-
-              <div>Time: {t.timestamp}</div>
-              <div className="text-xs text-gray-500">
-                Tx: {t.tx_hash}
-              </div>
-            </div>
-          ))
-        )}
-      </div>
-
-      {/* UPLOAD */}
-      {profile?.role === "FORENSIC_OFFICER" && (
-        <div className="bg-white p-5 rounded shadow">
-          <h2 className="font-semibold mb-3">Upload Evidence</h2>
-
-          <input
-            type="file"
-            onChange={(e) => setFile(e.target.files?.[0] || null)}
-            className="mb-3"
-          />
-
-          <button
-            onClick={handleUpload}
-            className="bg-blue-900 text-white px-4 py-2 rounded"
-          >
-            Upload Evidence
-          </button>
-        </div>
-      )}
-
-      {/* EVIDENCE */}
-      <div className="bg-white p-5 rounded shadow">
-        <h2 className="font-semibold mb-3">Evidence</h2>
-
-        {(caseData?.evidence || []).length === 0 ? (
-          <div className="text-sm text-gray-500">
-            No evidence added yet
+          <h1 className="text-xl font-semibold text-[#0F172A]">
+            {caseData.meta.title}
+          </h1>
+          <div className="text-xs text-gray-500 mt-1">
+            {caseData.meta.location.place} • {caseData.meta.location.city}
           </div>
-        ) : (
-          <div className="space-y-3">
-            {caseData.evidence.map((e: any) => (
-              <div
-                key={e.evidence_id}
-                onClick={() =>
-                  router.push(`/cases/${id}/evidence/${e.evidence_id}`)
-                }
-                className="border p-3 rounded cursor-pointer hover:bg-gray-50"
-              >
-                <div className="flex justify-between">
-                  <div className="font-semibold">{e.evidence_id}</div>
-                  <div className="text-xs text-green-600">
-                    {e.tx_hash ? "Anchored" : "Pending"}
+        </div>
+
+        <div className="px-3 py-1 text-xs rounded-md bg-blue-50 text-blue-700 border border-blue-200">
+          {caseData.meta.status}
+        </div>
+      </div>
+
+      {/* GRID */}
+      <div className="flex-1 grid grid-cols-12 gap-4 overflow-hidden">
+
+        {/* LEFT */}
+        <div className="col-span-3 flex flex-col gap-4 overflow-y-auto pr-1">
+
+          {/* CASE */}
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-4 text-xs space-y-2">
+            <div className="text-gray-500">Case Information</div>
+            <div><strong>Description:</strong> {caseData.meta.description}</div>
+            <div><strong>Type:</strong> {caseData.meta.case_type}</div>
+            <div><strong>Priority:</strong> {caseData.meta.priority}</div>
+          </div>
+
+          {/* LOCATION */}
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-4 text-xs">
+            <div className="text-gray-500 mb-1">Location</div>
+            <div>{caseData.meta.location.place}</div>
+            <div>{caseData.meta.location.platform}</div>
+            <div>{caseData.meta.location.city}, {caseData.meta.location.state}</div>
+            <div>{caseData.meta.location.country}</div>
+          </div>
+
+          {/* TIME */}
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-4 text-xs">
+            <div className="text-gray-500 mb-1">Time Details</div>
+            <div>Incident: {caseData.meta.incident_time}</div>
+            <div>Created: {caseData.meta.created_at}</div>
+          </div>
+
+          {/* OFFICER */}
+          <div className="bg-[#EEF2FF] border border-[#C7D2FE] rounded-xl p-4 text-xs">
+            <div className="text-blue-700 font-semibold mb-1">Investigating Officer</div>
+            <div>{getName(caseData.officers?.investigating_officer)}</div>
+          </div>
+
+          {/* TEAM */}
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-4 text-xs">
+            <div className="text-gray-500 mb-2">Team Members</div>
+
+            {(caseData.members || []).map((m: any, i: number) => {
+              const p = m.profile;
+              return (
+                <div key={i} className="mb-3 border-b pb-2">
+
+                  <div className="font-medium">
+                    {p?.officer_name || "Unknown"} ({m.role})
+                  </div>
+
+                  <div className="text-gray-500 text-[11px]">
+                    {p?.rank} • {p?.department}
+                  </div>
+
+                  <div className="text-[11px]">Badge: {p?.badge_id}</div>
+                  <div className="text-[11px]">Jurisdiction: {p?.jurisdiction}</div>
+
+                  <div className="text-[10px] text-gray-400 break-all">
+                    {p?.address}
                   </div>
                 </div>
-
-                <div className="text-sm text-gray-500">
-                  {e.category} • {e.type}
-                </div>
-
-                <div className="text-xs">
-                  Collected by: {getName(e.collected_by_profile || e.collected_by)}
-                </div>
-
-                <div className="text-xs">
-                  {new Date(e.timestamp).toLocaleString()}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
-        )}
-      </div>
 
-      {/* REPORTS */}
-      <div className="bg-white p-5 rounded shadow">
-        <h2 className="font-semibold mb-3">Reports</h2>
-
-        {(caseData?.reports || []).length === 0 ? (
-          <div className="text-sm text-gray-500">
-            No reports submitted
-          </div>
-        ) : (
-          caseData.reports.map((r: any, i: number) => (
-            <div key={i} className="border p-3 rounded mb-3">
-
-              <div className="font-semibold">
-                Evidence: {r.evidence_id}
-              </div>
-
-              <div className="text-xs text-gray-500">
-                {r.role_from} → {r.role_to}
-              </div>
-
-              <div className="mt-2 text-sm">
-                <strong>Summary:</strong> {r.report?.summary}
-              </div>
-
-              {r.report?.notes && (
-                <div className="text-sm">
-                  <strong>Notes:</strong> {r.report.notes}
-                </div>
-              )}
-
-              <div className="text-xs text-gray-500 mt-2">
-                Submitted: {r.submitted_at}
-              </div>
-
-              <div className="text-xs text-gray-400">
-                Tx: {r.linked_tx}
-              </div>
-
+          {/* BLOCKCHAIN */}
+          <div className="bg-[#EEF2FF] border border-[#C7D2FE] rounded-xl p-4 text-xs">
+            <div className="text-blue-700 font-semibold mb-1">Blockchain Proof</div>
+            <div className="break-all">
+              Tx: {caseData.chain_proof.case_creation.tx_hash}
             </div>
-          ))
-        )}
-      </div>
-
-      {/* AUDIT */}
-      <div className="bg-white p-5 rounded shadow">
-        <h2 className="font-semibold mb-2">Audit Logs</h2>
-
-        {(caseData?.audit || []).map((a: any, i: number) => (
-          <div key={i} className="text-sm">
-            {a.action} - {a.timestamp}
+            <div>Block: {caseData.chain_proof.case_creation.block_height}</div>
+            <div className="break-all">
+              Hash: {caseData.chain_proof.case_creation.data_hash}
+            </div>
           </div>
-        ))}
-      </div>
 
+        </div>
+
+        {/* CENTER */}
+        <div className="col-span-5 flex flex-col gap-4 overflow-hidden">
+
+          {/* EVIDENCE */}
+          <div className="bg-white border border-[#E2E8F0] rounded-xl p-4 flex-1 overflow-hidden">
+            <h2 className="text-sm font-semibold mb-3">Evidence</h2>
+
+            <div className="h-full overflow-y-auto space-y-2 pr-1">
+              {(caseData.evidence || []).map((e: any) => (
+                <div
+                  key={e.evidence_id}
+                  onClick={() => router.push(`/cases/${id}/evidence/${e.evidence_id}`)}
+                  className="border border-[#E2E8F0] p-3 rounded-md cursor-pointer hover:bg-blue-50"
+                >
+                  <div className="flex justify-between">
+                    <div className="font-medium text-sm">{e.evidence_id}</div>
+                    <div className="text-xs text-green-600">
+                      {e.tx_hash ? "Anchored" : "Pending"}
+                    </div>
+                  </div>
+
+                  <div className="text-xs text-gray-500">
+                    {e.category} • {e.type}
+                  </div>
+
+                  <div className="text-xs">
+                    Collected by: {getName(e.collected_by_profile || e.collected_by)}
+                  </div>
+
+                  <div className="text-[10px] text-gray-400">
+                    {formatDate(e.timestamp || e.collected_at || e.created_at)}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* REPORTS */}
+          <div className="bg-white border border-[#E2E8F0] rounded-xl p-4 flex-1 overflow-hidden">
+            <h2 className="text-sm font-semibold mb-3">Reports</h2>
+
+            <div className="h-full overflow-y-auto space-y-2 pr-1">
+              {(caseData.reports || []).map((r: any, i: number) => (
+                <div key={i} className="border p-3 rounded-md text-xs">
+
+                  <div className="font-medium">
+                    Evidence: {r.evidence_id}
+                  </div>
+
+                  <div className="text-gray-500">
+                    {r.role_from} → {r.role_to}
+                  </div>
+
+                  <div className="mt-1">
+                    <strong>Summary:</strong> {r.report?.summary}
+                  </div>
+
+                  {r.report?.notes && (
+                    <div className="text-gray-500">
+                      {r.report.notes}
+                    </div>
+                  )}
+
+                  <div className="text-[10px] text-gray-400 mt-1">
+                    {r.submitted_at}
+                  </div>
+
+                  <div className="text-[10px] text-gray-400 break-all">
+                    {r.linked_tx}
+                  </div>
+
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+
+        {/* RIGHT */}
+        <div className="col-span-4 flex flex-col gap-4 overflow-hidden">
+
+          {/* TIMELINE */}
+          <div className="bg-white border border-[#E2E8F0] rounded-xl p-4 flex-1 overflow-hidden">
+            <h2 className="text-sm font-semibold mb-3">Chain of Custody</h2>
+
+            <div className="h-full overflow-y-auto space-y-3 pr-1">
+              {(caseData.timeline || []).map((t: any, i: number) => (
+                <div key={i} className="flex gap-2 text-xs">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-1"></div>
+
+                  <div className="flex-1 border border-[#E2E8F0] p-2 rounded-md">
+                    <div className="font-medium">{t.type}</div>
+
+                    <div>By: {getName(t.by_profile || t.by)}</div>
+
+                    {(t.to_profile || t.assigned_to) && (
+                      <div>
+                        To: {getName(t.to_profile || t.assigned_to)}
+                      </div>
+                    )}
+
+                    <div className="text-gray-400">
+                      {t.timestamp}
+                    </div>
+
+                    <div className="text-[10px] text-gray-400 break-all">
+                      {t.tx_hash}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* UPLOAD */}
+          {profile?.role === "FORENSIC_OFFICER" && (
+            <div className="bg-[#EEF2FF] border border-[#C7D2FE] rounded-xl p-4">
+              <div className="text-sm font-semibold mb-2">Upload Evidence</div>
+
+              <input
+                type="file"
+                onChange={(e) => setFile(e.target.files?.[0] || null)}
+                className="text-xs mb-2"
+              />
+
+              <button
+                onClick={handleUpload}
+                className="bg-blue-700 text-white px-3 py-1 rounded text-xs"
+              >
+                Upload
+              </button>
+            </div>
+          )}
+
+          {/* AUDIT */}
+          <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-4 flex-1 overflow-hidden">
+            <h2 className="text-sm font-semibold mb-2">Audit Logs</h2>
+
+            <div className="h-full overflow-y-auto text-xs space-y-1 pr-1">
+              {(caseData.audit || []).map((a: any, i: number) => (
+                <div key={i} className="text-gray-600">
+                  {a.action} • {a.timestamp}
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   );
 }

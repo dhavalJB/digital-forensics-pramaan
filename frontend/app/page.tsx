@@ -15,9 +15,19 @@ export default function Home() {
     }
   }, [session, loading]);
 
-  if (loading) return <div>Loading...</div>; // 🔥 WAIT
+  if (loading) {
+    return (
+      <div className="h-screen overflow-hidden bg-[#F4F7FB] flex items-center justify-center text-gray-500">
+        Loading...
+      </div>
+    );
+  }
 
   if (!session) return null;
 
-  return <Dashboard />;
+  return (
+    <div className="h-full overflow-hidden">
+      <Dashboard />
+    </div>
+  );
 }

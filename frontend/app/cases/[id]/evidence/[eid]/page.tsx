@@ -17,27 +17,24 @@ export default function EvidenceDetailPage() {
   const [summary, setSummary] = useState("");
   const [notes, setNotes] = useState("");
 
+  // ✅ ROLE FIX
   const role = profile?.role;
-
-  // 🔥 HELPERS
-  const getAddress = (val: any) =>
-    typeof val === "object" ? val?.address : val;
-
-  const getName = (val: any) =>
-    typeof val === "object" ? val?.officer_name : val;
 
   useEffect(() => {
     if (!id || !eid || !session?.address) return;
 
+    // Evidence
     fetch(`http://localhost:4000/case/${id}/evidence/${eid}`)
       .then((res) => res.json())
       .then((data) => setEvidence(data.evidence))
       .catch(console.error);
 
+    // Profile
     fetch(`http://localhost:4000/profile/${session.address}`)
       .then((res) => res.json())
       .then((data) => setProfile(data.profile))
       .catch(console.error);
+
   }, [id, eid, session]);
 
   // =========================
@@ -46,6 +43,7 @@ export default function EvidenceDetailPage() {
   const handleTransfer = async () => {
     if (!to) return alert("Enter receiver address");
 
+    // 🔥 ANALYST MUST GIVE REPORT
     if (role === "ANALYST" && !summary) {
       return alert("Summary is required for Analyst transfer");
     }
@@ -65,9 +63,9 @@ export default function EvidenceDetailPage() {
           report:
             role === "ANALYST"
               ? {
-                  summary,
-                  notes,
-                }
+                summary,
+                notes,
+              }
               : undefined,
         })
       });
@@ -120,14 +118,17 @@ export default function EvidenceDetailPage() {
 
   if (!evidence) return <div className="p-6">Loading...</div>;
 
-  // 🔥 FIXED OWNERSHIP LOGIC
-  const currentOwner = getAddress(evidence?.ownership?.current_owner);
-  const pendingOwner = getAddress(evidence?.ownership?.pending_owner);
+  const isOwner =
+    evidence?.ownership?.current_owner === session?.address;
 
-  const isOwner = currentOwner === session?.address;
-  const isPending = !!pendingOwner;
-  const isIncoming = pendingOwner === session?.address;
-  const isOutgoing = pendingOwner && currentOwner === session?.address;
+  const isPending = !!evidence?.ownership?.pending_owner;
+
+  const isIncoming =
+    evidence?.ownership?.pending_owner === session?.address;
+
+  const isOutgoing =
+    evidence?.ownership?.pending_owner &&
+    evidence?.ownership?.current_owner === session?.address;
 
   const fileUrl = `http://localhost:4000/files/${id}/files/${evidence.file_name}`;
 
@@ -173,23 +174,9 @@ export default function EvidenceDetailPage() {
           <div><strong>File Name:</strong> {evidence.file_name}</div>
           <div><strong>File Type:</strong> {evidence.category}</div>
           <div><strong>File Size:</strong> {(evidence.size / 1024).toFixed(2)} KB</div>
-
-          <div>
-            <strong>Uploaded By:</strong>{" "}
-            {getName(evidence.collected_by_profile || evidence.collected_by)}
-          </div>
-
+          <div><strong>Uploaded By:</strong> {evidence.collected_by}</div>
           <div><strong>Upload Time:</strong> {new Date(evidence.collected_at).toLocaleString()}</div>
-
-          <div>
-            <strong>Current Owner:</strong>{" "}
-            {getName(evidence?.ownership?.current_owner)}
-          </div>
-
-          <div>
-            <strong>Location:</strong>{" "}
-            {evidence.location?.lat}, {evidence.location?.lng}
-          </div>
+          <div><strong>Location:</strong> {evidence.location?.lat}, {evidence.location?.lng}</div>
         </div>
       </div>
 
@@ -233,7 +220,7 @@ export default function EvidenceDetailPage() {
               {new Date(evidence.chain_proof.timestamp).toLocaleString()}
             </div>
 
-            {/* TRANSFER */}
+            {/* 🔁 TRANSFER */}
             {isOwner && !isPending && (
               <div className="bg-white p-6 rounded-xl shadow space-y-3">
                 <h2 className="font-semibold">Transfer Evidence</h2>
