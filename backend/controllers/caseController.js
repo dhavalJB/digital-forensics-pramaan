@@ -1,5 +1,6 @@
 const caseService = require("../services/caseService");
 const authService = require("../services/authService");
+const courtService = require("../services/courtService");
 
 exports.getCases = async (req, res) => {
   try {
@@ -35,7 +36,7 @@ exports.getCaseById = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const caseData = await caseService.getCaseById(id); // ✅ FIX
+    const caseData = await courtService.getFullCaseForCourt(id); // ✅ FIX
 
     if (!caseData) {
       return res.status(404).json({

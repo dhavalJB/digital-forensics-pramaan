@@ -1,0 +1,34 @@
+{
+  "evidence_id": "EVID_072146",
+  "case_id": "CASE_914529",
+  "type": "video/mp4",
+  "category": "VIDEO",
+  "file_name": "EVID_072146.mp4",
+  "size": 4148873,
+  "hash": "3d85d8e7c3fa34d3380535e3dab8acca2a6644bb2ac26f94c864f4990dff2531",
+  "integrity": {
+    "hash_algorithm": "SHA256",
+    "hash_verified": true
+  },
+  "collected_by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+  "collected_at": "2026-04-29T04:47:52.146Z",
+  "location": {
+    "lat": null,
+    "lng": null
+  },
+  "ownership": {
+    "current_owner": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+    "history": [
+      {
+        "owner": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+        "action": "COLLECTED",
+        "timestamp": "2026-04-29T04:47:52.146Z"
+      }
+    ]
+  },
+  "chain_proof": {
+    "tx_hash": "C3563FC575AF8E178E322C5EAD146763A5CD39B32739538598452C7921A9EDDB",
+    "block_height": "12189",
+    "timestamp": "2026-04-29T04:47:48Z"
+  }
+}

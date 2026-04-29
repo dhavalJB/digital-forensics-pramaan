@@ -135,6 +135,7 @@ exports.getFullCaseForCourt = async (caseId) => {
   return {
     case_id: caseData.case_id,
     meta: caseData.meta,
+    chain_proof: caseData.chain_proof, 
     officers,
     members,
     timeline,

@@ -217,6 +217,20 @@
       "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
       "timestamp": "2026-04-28T12:30:35.849Z",
       "tx_hash": "9FB88677D041F2EBE9DA952E95D0D6B32BF052C5EF94BD640E4B2A0744B4DA7B"
+    },
+    {
+      "type": "EVIDENCE_COLLECTED",
+      "evidence_id": "EVID_072146",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-29T04:47:52.146Z",
+      "tx_hash": "C3563FC575AF8E178E322C5EAD146763A5CD39B32739538598452C7921A9EDDB"
+    },
+    {
+      "type": "EVIDENCE_COLLECTED",
+      "evidence_id": "EVID_282467",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-29T04:51:22.467Z",
+      "tx_hash": "061BF76255A52EB74A9A243E439FCBEC3D2EFA999426CFB7694218B7C58A9A4A"
     }
   ],
   "evidence": [
@@ -246,6 +260,24 @@
       "collected_by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
       "timestamp": "2026-04-27T07:12:13.591Z",
       "tx_hash": "A08F85E38810B078FC46D3C79F79A62F556F2AAFC24831640D929A1DB55DC134"
+    },
+    {
+      "evidence_id": "EVID_072146",
+      "hash": "3d85d8e7c3fa34d3380535e3dab8acca2a6644bb2ac26f94c864f4990dff2531",
+      "category": "VIDEO",
+      "type": "video/mp4",
+      "collected_by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-29T04:47:52.146Z",
+      "tx_hash": "C3563FC575AF8E178E322C5EAD146763A5CD39B32739538598452C7921A9EDDB"
+    },
+    {
+      "evidence_id": "EVID_282467",
+      "hash": "b211045fd5bbda87437a54c9486c0c278db1b5e88fc1a5ce876e729f63b0f6b1",
+      "category": "DOCUMENT",
+      "type": "application/pdf",
+      "collected_by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-29T04:51:22.467Z",
+      "tx_hash": "061BF76255A52EB74A9A243E439FCBEC3D2EFA999426CFB7694218B7C58A9A4A"
     }
   ],
   "reports": [
@@ -462,6 +494,20 @@
       "by": "pramaan1dxp60qf5yclwaeld4dp44jtn20grxqsqr48tw4",
       "timestamp": "2026-04-28T12:30:35.849Z",
       "tx_hash": "9FB88677D041F2EBE9DA952E95D0D6B32BF052C5EF94BD640E4B2A0744B4DA7B"
+    },
+    {
+      "action": "EVIDENCE_ADDED",
+      "evidence_id": "EVID_072146",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-29T04:47:52.146Z",
+      "tx_hash": "C3563FC575AF8E178E322C5EAD146763A5CD39B32739538598452C7921A9EDDB"
+    },
+    {
+      "action": "EVIDENCE_ADDED",
+      "evidence_id": "EVID_282467",
+      "by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+      "timestamp": "2026-04-29T04:51:22.467Z",
+      "tx_hash": "061BF76255A52EB74A9A243E439FCBEC3D2EFA999426CFB7694218B7C58A9A4A"
     }
   ],
   "members": [

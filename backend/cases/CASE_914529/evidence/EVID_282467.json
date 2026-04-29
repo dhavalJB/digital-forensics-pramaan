@@ -1,0 +1,34 @@
+{
+  "evidence_id": "EVID_282467",
+  "case_id": "CASE_914529",
+  "type": "application/pdf",
+  "category": "DOCUMENT",
+  "file_name": "EVID_282467.pdf",
+  "size": 4591,
+  "hash": "b211045fd5bbda87437a54c9486c0c278db1b5e88fc1a5ce876e729f63b0f6b1",
+  "integrity": {
+    "hash_algorithm": "SHA256",
+    "hash_verified": true
+  },
+  "collected_by": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+  "collected_at": "2026-04-29T04:51:22.467Z",
+  "location": {
+    "lat": null,
+    "lng": null
+  },
+  "ownership": {
+    "current_owner": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+    "history": [
+      {
+        "owner": "pramaan1j5d3e7s99a4prl4nhe0jzgnnwk0em24cny6unp",
+        "action": "COLLECTED",
+        "timestamp": "2026-04-29T04:51:22.467Z"
+      }
+    ]
+  },
+  "chain_proof": {
+    "tx_hash": "061BF76255A52EB74A9A243E439FCBEC3D2EFA999426CFB7694218B7C58A9A4A",
+    "block_height": "12230",
+    "timestamp": "2026-04-29T04:51:20Z"
+  }
+}
